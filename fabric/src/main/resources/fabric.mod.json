@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "generations_ultraspace",
+  "id": "generations_modulename",
   "version": "${version}",
-  "name": "Generations Ultraspace",
+  "name": "Generations Module Name",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -16,12 +16,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "generations.gg.generations.ultraspace.generationsultraspace.fabric.GenerationsUltraSpaceFabric"
+      "generations.gg.generations.modulename.generationsmodulename.fabric.GenerationsModuleNameFabric"
     ]
   },
   "mixins": [
-    "generations_ultraspace.mixins.json",
-    "generations_ultraspace-common.mixins.json"
+    "generations_modulename.mixins.json",
+    "generations_modulename-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",
