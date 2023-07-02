@@ -1,13 +1,14 @@
-package generations.gg.generations.ultraspace.generationsultraspace.fabric;
+package generations.gg.generations.modulename.generationsmodulename.fabric;
 
-import generations.gg.generations.ultraspace.generationsultraspace.GenerationsUltraSpaceExpectPlatform;
+
+import generations.gg.generations.modulename.generationsmodulename.GenerationsModuleNameExpectPlatform;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.nio.file.Path;
 
-public class GenerationsUltraSpaceExpectPlatformImpl {
+public class GenerationsModuleNameExpectPlatformImpl {
     /**
-     * This is our actual method to {@link GenerationsUltraSpaceExpectPlatform#getConfigDirectory()}.
+     * This is our actual method to {@link GenerationsModuleNameExpectPlatform#getConfigDirectory()}.
      */
     public static Path getConfigDirectory() {
         return FabricLoader.getInstance().getConfigDir();

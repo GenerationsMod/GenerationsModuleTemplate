@@ -1,7 +1,7 @@
-package generations.gg.generations.ultraspace.generationsultraspace;
+package generations.gg.generations.modulename.generationsmodulename;
 
-public class GenerationsUltraSpace {
-    public static final String MOD_ID = "generations_ultraspace";
+public class GenerationsModuleName {
+    public static final String MOD_ID = "generationsmodulename";
     public static void init() {
 
     }

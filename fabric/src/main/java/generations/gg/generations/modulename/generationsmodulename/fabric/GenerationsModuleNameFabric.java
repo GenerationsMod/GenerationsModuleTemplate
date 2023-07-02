@@ -1,11 +1,11 @@
-package generations.gg.generations.ultraspace.generationsultraspace.fabric;
+package generations.gg.generations.modulename.generationsmodulename.fabric;
 
-import generations.gg.generations.ultraspace.generationsultraspace.GenerationsUltraSpace;
+import generations.gg.generations.modulename.generationsmodulename.GenerationsModuleName;
 import net.fabricmc.api.ModInitializer;
 
-public class GenerationsUltraSpaceFabric implements ModInitializer {
+public class GenerationsModuleNameFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        GenerationsUltraSpace.init();
+        GenerationsModuleName.init();
     }
 }
