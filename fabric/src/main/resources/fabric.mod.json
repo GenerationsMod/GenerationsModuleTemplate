@@ -19,10 +19,6 @@
       "generations.gg.generations.modulename.generationsmodulename.fabric.GenerationsModuleNameFabric"
     ]
   },
-  "mixins": [
-    "generations_modulename.mixins.json",
-    "generations_modulename-common.mixins.json"
-  ],
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.19.4",
