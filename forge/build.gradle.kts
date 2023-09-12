@@ -30,7 +30,7 @@ loom {
 
     runs.create("data") {
         data()
-        programArgs("--all", "--mod", "generations_ultraspace")
+        programArgs("--all", "--mod", "generationsmodulename")
         programArgs("--output", project(":common").file("src/main/generated/resources").absolutePath)
         programArgs("--existing", project(":common").file("src/main/resources").absolutePath)
     }
@@ -53,7 +53,7 @@ dependencies {
     modApi(include("earth.terrarium:botarium-forge-${minecraftVersion}:${project.properties["botarium_version"]}")!!)
 
     //Cobblemon
-    modRuntimeOnly("thedarkcolour:kotlinforforge:4.2.0")
+    modRuntimeOnly("thedarkcolour:kotlinforforge:4.4.0")
     modApi("com.cobblemon:forge:${project.properties["cobblemon_version"]}")
 }
 

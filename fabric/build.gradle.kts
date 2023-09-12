@@ -17,7 +17,18 @@ configurations {
     getByName("developmentFabric").extendsFrom(configurations["common"])
 }
 
-loom.accessWidenerPath.set(project(":common").loom.accessWidenerPath)
+loom {
+    accessWidenerPath.set(project(":common").loom.accessWidenerPath)
+    runs.create("datagen") {
+        server()
+        name("Data Generation")
+        vmArg("-Dfabric-api.datagen")
+        vmArg("-Dfabric-api.datagen.output-dir=${project(":common").file("src/main/generated/resources").absolutePath}")
+        vmArg("-Dfabric-api.datagen.modid=generationsmodulename")
+
+        runDir("build/datagen")
+    }
+}
 
 dependencies {
     modImplementation("net.fabricmc:fabric-loader:${project.properties["fabric_loader_version"]}")
