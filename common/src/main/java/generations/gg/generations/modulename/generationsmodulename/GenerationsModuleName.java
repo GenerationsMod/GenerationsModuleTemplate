@@ -1,6 +1,5 @@
 package generations.gg.generations.modulename.generationsmodulename;
 
-
 import generations.gg.generations.core.generationscore.config.ConfigLoader;
 import generations.gg.generations.modulename.generationsmodulename.config.Config;
 
@@ -13,6 +12,6 @@ public class GenerationsModuleName {
     public static Config CONFIG;
 
     public static void init() {
-        CONFIG = ConfigLoader.loaderConfig(Config.class, "name", "config");
+        CONFIG = ConfigLoader.loadConfig(Config.class, "name", "config");
     }
 }
