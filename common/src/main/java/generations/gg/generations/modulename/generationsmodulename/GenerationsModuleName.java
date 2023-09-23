@@ -6,7 +6,7 @@ import generations.gg.generations.modulename.generationsmodulename.config.Config
 public class GenerationsModuleName {
 
     /** The mod id for the Generations-ModuleName mod. */
-    public static final String MOD_ID = "generationsmodulename";
+    public static final String MOD_ID = "generations_modulename";
 
     /** The config for the Generations-ModuleName mod. */
     public static Config CONFIG;

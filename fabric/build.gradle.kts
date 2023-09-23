@@ -40,8 +40,8 @@ dependencies {
     modRuntimeOnly("me.djtheredstoner:DevAuth-fabric:${project.properties["devauth_version"]}")
 
     // Generations-Core Fabric
-    modImplementation("generations.gg.generations.core:Generations-Core-Fabric:${project.properties["generations-core_version"]}")
-    modImplementation("earth.terrarium:botarium-fabric-${minecraftVersion}:${project.properties["botarium_version"]}")
+    modApi("generations.gg.generations.core:Generations-Core-Fabric:${project.properties["generations-core_version"]}")
+    modApi("earth.terrarium:botarium-fabric-${minecraftVersion}:${project.properties["botarium_version"]}")
 
     //Cobblemon
     modApi("com.cobblemon:fabric:${project.properties["cobblemon_version"]}")
