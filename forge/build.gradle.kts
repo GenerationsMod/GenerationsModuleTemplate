@@ -53,7 +53,7 @@ dependencies {
     modRuntimeOnly("earth.terrarium.botarium:botarium-forge-${minecraftVersion}:${project.properties["botarium_version"]}")
 
     //Cobblemon
-    modRuntimeOnly("thedarkcolour:kotlinforforge:4.5.0")
+    modRuntimeOnly("thedarkcolour:kotlinforforge:4.10.0")
     modApi("com.cobblemon:forge:${project.properties["cobblemon_version"]}")
 }
 
