@@ -46,11 +46,12 @@ dependencies {
     modRuntimeOnly("me.djtheredstoner:DevAuth-forge-latest:${project.properties["devauth_version"]}")
 
     // Generations-Core Forge
-    modApi("generations.gg.generations.core:Generations-Core-Forge:${project.properties["generations-core_version"]}")
-    modApi("earth.terrarium:botarium-forge-${minecraftVersion}:${project.properties["botarium_version"]}")
+    modImplementation("generations.gg.generations.core:Generations-Core-Forge:${project.properties["generations-core_version"]}")
+    modRuntimeOnly("dev.architectury:architectury-forge:${project.properties["architectury_version"]}")
+    modRuntimeOnly("earth.terrarium.botarium:botarium-forge-${minecraftVersion}:${project.properties["botarium_version"]}")
 
     //Cobblemon
-    modRuntimeOnly("thedarkcolour:kotlinforforge:4.4.0")
+    implementation("thedarkcolour:kotlinforforge:4.10.0")
     modApi("com.cobblemon:forge:${project.properties["cobblemon_version"]}")
 }
 
@@ -92,7 +93,7 @@ components {
 }
 
 publishing {
-    publications.create<MavenPublication>("mavenCommon") {
+    publications.create<MavenPublication>("mavenForge") {
         artifactId = "${project.properties["archives_base_name"]}" + "-Forge"
         from(components["java"])
     }

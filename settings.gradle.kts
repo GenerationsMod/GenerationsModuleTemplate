@@ -6,7 +6,7 @@ pluginManagement.repositories {
 }
 
 plugins {
-    id("com.gradle.enterprise") version "3.15"
+    `gradle-enterprise`
 }
 
 gradleEnterprise.buildScan {
@@ -16,4 +16,4 @@ gradleEnterprise.buildScan {
 
 include("common", "fabric", "forge")
 
-rootProject.name = "generations-modulename"
+rootProject.name = "Generations-Modulename"

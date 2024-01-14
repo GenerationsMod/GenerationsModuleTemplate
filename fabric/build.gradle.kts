@@ -17,18 +17,9 @@ configurations {
     getByName("developmentFabric").extendsFrom(configurations["common"])
 }
 
-loom {
-    accessWidenerPath.set(project(":common").loom.accessWidenerPath)
-    runs.create("datagen") {
-        server()
-        name("Data Generation")
-        vmArg("-Dfabric-api.datagen")
-        vmArg("-Dfabric-api.datagen.output-dir=${project(":common").file("src/main/generated/resources").absolutePath}")
-        vmArg("-Dfabric-api.datagen.modid=generationsmodulename")
+loom.accessWidenerPath.set(project(":common").loom.accessWidenerPath)
 
-        runDir("build/datagen")
-    }
-}
+fabricApi.configureDataGeneration()
 
 dependencies {
     modImplementation("net.fabricmc:fabric-loader:${project.properties["fabric_loader_version"]}")
@@ -40,11 +31,13 @@ dependencies {
     modRuntimeOnly("me.djtheredstoner:DevAuth-fabric:${project.properties["devauth_version"]}")
 
     // Generations-Core Fabric
-    modApi("generations.gg.generations.core:Generations-Core-Fabric:${project.properties["generations-core_version"]}")
-    modApi("earth.terrarium:botarium-fabric-${minecraftVersion}:${project.properties["botarium_version"]}")
+    modImplementation("generations.gg.generations.core:Generations-Core-Fabric:${project.properties["generations-core_version"]}")
+    modRuntimeOnly("dev.architectury:architectury-fabric:${project.properties["architectury_version"]}")
+    modRuntimeOnly("earth.terrarium.botarium:botarium-fabric-${minecraftVersion}:${project.properties["botarium_version"]}")
 
     //Cobblemon
     modApi("com.cobblemon:fabric:${project.properties["cobblemon_version"]}")
+    modRuntimeOnly("net.fabricmc:fabric-language-kotlin:1.10.17+kotlin.1.9.22")
 }
 
 tasks {
@@ -85,7 +78,7 @@ components {
 }
 
 publishing {
-    publications.create<MavenPublication>("mavenCommon") {
+    publications.create<MavenPublication>("mavenFabric") {
         artifactId = "${project.properties["archives_base_name"]}" + "-Fabric"
         from(components["java"])
     }
