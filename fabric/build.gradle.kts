@@ -37,7 +37,7 @@ dependencies {
 
     //Cobblemon
     modApi("com.cobblemon:fabric:${project.properties["cobblemon_version"]}")
-    modRuntimeOnly("net.fabricmc:fabric-language-kotlin:1.10.17+kotlin.1.9.22")
+    modRuntimeOnly("net.fabricmc:fabric-language-kotlin:1.10.18+kotlin.1.9.22")
 }
 
 tasks {
